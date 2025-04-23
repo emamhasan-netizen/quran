@@ -1,0 +1,149 @@
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100..700;1,100..700&family=Lora:ital,wght@0,400..700;1,400..700&family=Outfit:wght@100..900&display=swap');
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: "Josefin Sans", sans-serif;
+  background-color: #f4f4f4;
+  color: #333;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+header {
+  background-color: skyblue;
+  color: #0f0b0b;
+  padding: 15px 20px;
+  text-align: center;
+  font-size: 1.8em;
+  font-weight: bold;
+}
+
+.container {
+  display: flex;
+  flex: 1;
+  overflow: hidden;
+  height: calc(100vh - 60px);
+}
+
+.sidebar {
+  width: 250px;
+  background-color: #1c1c2e;
+  color: white;
+  padding: 20px;
+  overflow-y: auto;
+}
+
+.sidebar h2 {
+  font-size: 1.2em;
+  margin-bottom: 10px;
+}
+
+#search-input {
+  width: 100%;
+  padding: 8px;
+  margin-bottom: 15px;
+  border-radius: 5px;
+  border: none;
+  font-family: 'Amiri', serif;
+}
+
+#surah-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+#surah-list li {
+  padding: 10px;
+  border-bottom: 1px solid #333;
+  cursor: pointer;
+}
+
+#surah-list li:hover {
+  background-color: #333;
+}
+
+.content {
+  flex: 1;
+  padding: 20px;
+  overflow-y: auto;
+  background-color: #ffffff;
+  direction: rtl;
+}
+
+#surah-content {
+  font-size: 1.2em;
+  line-height: 2;
+}
+
+#surah-content h2 {
+  font-size: 2em;
+  color: #1c1c2e;
+  margin-bottom: 20px;
+  text-align: center;
+  border-bottom: 2px solid #1c1c2e;
+  padding-bottom: 10px;
+}
+
+.verse {
+  margin-bottom: 25px;
+}
+
+.verse p {
+  margin: 5px 0;
+}
+
+.verse .english {
+  color: white;
+  background-color: #009688;
+  padding: 10px;
+  border-radius: 5px;
+  font-size: 1em;
+  direction: ltr;
+  text-align: left;
+}
+
+#scroll-to-top-button {
+  position: fixed;
+  bottom: 20px;
+  left: 20px;
+  padding: 10px 15px;
+  background-color: #1c1c2e;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  z-index: 1000;
+}
+
+#scroll-to-top-button:hover {
+  background-color: #333;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .container {
+    flex-direction: column;
+  }
+
+  .sidebar {
+    width: 100%;
+    height: auto;
+    position: relative;
+  }
+
+  .content {
+    padding: 10px;
+  }
+
+  #scroll-to-top-button {
+    left: 50%;
+    transform: translateX(-50%);
+  }
+}
